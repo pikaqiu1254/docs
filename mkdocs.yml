@@ -16,25 +16,29 @@ nav:
 theme:
   name: material
   locale: zh
+  features:
+    - navigation.footer
   palette:
-
-    # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
-
-    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default 
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-
-    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
 
+extra:
+  social:
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/12325142
+    - icon: fontawesome/brands/qq
+      link: https://jq.qq.com/?_wv=1027&k=vXkTtV8K
+
+copyright: Copyright &copy; 页面内容均以<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow noreferrer">CC BY-NC-SA 4.0</a>条款授权
