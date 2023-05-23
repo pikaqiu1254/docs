@@ -2,13 +2,13 @@
 ## 一 注册账号
 ## <span style='color:#ff1734;'>如果你有正版，可以直接通过正版进入</span>  
 1. 注册皮肤站账号，皮肤站地址:[海蓝之家皮肤站](https://skin.chenjia.one:25556/)  
-![注册](../图片/如何进服/注册.png)  
+![注册](../img/howtojoin/register.png)  
 2. 在注册界面注册账号  
-![注册界面](../图片/如何进服/注册界面.png)  
+![注册界面](../img/howtojoin/registerui.png)  
 1. 进入皮肤站你会看到一个邮箱验证  
-![仪表盘邮箱验证](../图片/如何进服/仪表盘邮箱验证.png)
+![仪表盘邮箱验证](../img/howtojoin/dashboard_emailauth.png)
 如果你没有看到邮件，可以点击再次发送  
-![邮箱验证](../图片/如何进服/邮箱验证.jpg)  
+![邮箱验证](../img/howtojoin/emailauth.jpg)  
 打开链接后把你注册时的邮箱填入进去即可  
 ## 二 启动器配置  
 服务器是 Java 版的，最好是采用电脑来玩，当然手机也可以，可以通过以下方式下载启动器：  
@@ -18,7 +18,7 @@
 [哔哩哔哩](https://www.bilibili.com/video/BV19v4y167q9)  
 ### 1. PCL2 启动器教学
 如果你是 PCL2 启动器，下载解压之后打开文件。  
-![PCL下载](../图片/如何进服/PCL下载.png)  
+![PCL下载](../img/howtojoin/download_pcl.png)  
 
 请使用<span style='color:#ff1734;'>1.19.2</span>来游玩服务器，如果你选择了更高的版本，可以自行安装模组向下兼容。  
 如果你是萌新，直接点击，再开始安装即可。如果你是老玩家，推荐安装 Fabric  
@@ -34,19 +34,19 @@
 
 如果你是 HMCL 启动器，可以按照如下操作：
 点击左侧菜单栏下载，选择 1.19.2 的游戏版本。
-![HMCL下载](../图片/如何进服/HMCL下载.png)
+![HMCL下载](../img/howtojoin/download_hmcl.png)
 如果你是萌新，直接点击，再开始安装即可。如果你是老玩家，推荐安装 Fabric  
-![HMCL版本选择](../图片/如何进服/HMCL版本选择.png)
+![HMCL版本选择](../img/howtojoin/HMCL_choose_version.png)
 打开启动器，点击左上角的账户  
-![HMCL进入账号界面](../图片/如何进服/HMCL进入账号界面.png)
+![HMCL进入账号界面](../img/howtojoin/HMCL_accounts_ui.png)
 点击右下角添加认证服务器，并填写如下服务器地址【 https://skin.chenjia.one:25556/api/yggdrasil 】，点击下一步，点击完成。  
-![HMCL验证](../图片/如何进服/HMCL验证.png)  
+![HMCL验证](../img/howtojoin/HMCL_auth.png)  
 ### 3. 添加服务器地址开始愉快的玩耍叭~  
 
 ① 进入游戏之后，点击多人游戏  
-![多人游戏](../图片/如何进服/多人游戏.png)
+![多人游戏](../img/howtojoin/multiplayers_game.png)
 ② 点击右下角添加服务器
-![添加服务器](../图片/如何进服/添加服务器.png)  
+![添加服务器](../img/howtojoin/add_server.png)  
 ③ 填写如下内容，点击完成  
  new.chenjia.one
 ![]()  

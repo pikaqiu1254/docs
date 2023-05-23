@@ -1,0 +1,40 @@
+site_name: 海蓝大陆文档
+site_description: 'B站up主尘甲出资并设计的RPG类Minecraft服务器“海蓝大陆”使用文档'
+site_url: https://docs.chenjia.one/
+nav:
+    - 欢迎: index.md
+    - 开始游戏:
+      - 如何进服？: start_game/howtojoin.md
+      - 常见问题: start_game/faq.md
+      - 注意事项: start_game/rule.md
+    - 插件:
+      - CMI: plugin/cmi.md
+      - 地皮: plugin/plotsquared.md
+      - 菜单: plugin/menu.md
+    - 贡献者: contributor.md
+    - 关于: about.md
+theme:
+  name: material
+  locale: zh
+  palette:
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
