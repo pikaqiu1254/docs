@@ -1,0 +1,6 @@
+# **关于服务器**  
+ 
+
+服务器为[<span style='color:#29e3e3;'>爱玩游戏的尘甲</span>](https://space.bilibili.com/12325142)的专属粉丝服务器
+服务器为RPG类型  
+专属粉丝群:[523036769](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=0CtvzZzU9odfMQqZhvOpZDUkl9hMy1KX&authKey=ZCUGZRSB31eOP%2FPXBSR17ogeONYCpJoRW47uRu6FrBHdnhXMUrpvrxQh6tqEED4u&noverify=0&group_code=523036769)  
