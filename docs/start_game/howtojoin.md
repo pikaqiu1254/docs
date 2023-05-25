@@ -29,6 +29,27 @@
 其中，手机版的教学可以参考 HMCL 启动器的教学，游玩技巧可以看：
 [哔哩哔哩](https://www.bilibili.com/video/BV19v4y167q9)  
 
+### 2.0 附：皮肤站快速配置<sub>(e.g. 海蓝之家)</sub>
+
+  <div class="card-footer"><button id="ygg-dnd-button" class="btn" draggable="true" data-clipboard-text="https://skin.chenjia.one:25556/api/yggdrasil" > 将此按钮拖动至启动器</button>
+    <a target="_blank" href="https://blessing.netlify.app/yggdrasil-api/authlib-injector.html" >启动器配置教程</a></div>
+    
+<style>
+  .btn {
+    display: inline-block;
+    background-color: #2196F3;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+  }
+</style>
+
+
 ### 2.1. PCL2 启动器教学
 
 如果你是 PCL2 启动器，下载解压之后打开文件。  
