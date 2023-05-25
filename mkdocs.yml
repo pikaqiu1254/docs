@@ -11,6 +11,9 @@ nav:
       - CMI: plugin/cmi.md
       - 地皮: plugin/plotsquared.md
       - 菜单: plugin/menu.md
+    - 物品:
+      - 消耗品: item/Consumables.md 
+      - 装备: item/equipment.md
     - 贡献者: contributor.md
     - 关于: about.md
 theme:
@@ -20,6 +23,11 @@ theme:
   locale: zh
   features:
     - navigation.footer
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.path
+    - navigation.top
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -35,6 +43,9 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+
+extra_css:
+  - css/extra.css
 
 extra:
   social:
