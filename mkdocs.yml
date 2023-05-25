@@ -15,6 +15,8 @@ nav:
     - 关于: about.md
 theme:
   name: material
+  favicon: img/favicon.png
+  logo: img/logo.webp
   locale: zh
   features:
     - navigation.footer
