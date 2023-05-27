@@ -88,7 +88,7 @@
 
 ![HMCL验证](../img/howtojoin/HMCL_auth.png)  
 
-### 3. 添加服务器地址开始愉快的玩耍叭~  
+## 3. 添加服务器地址开始愉快的玩耍叭~  
 
 1.  进入游戏之后，点击多人游戏  
 ![多人游戏](../img/howtojoin/multiplayers_game.png)
