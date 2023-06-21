@@ -14,6 +14,7 @@ nav:
     - 物品:
       - 消耗品: item/Consumables.md 
       - 装备: item/equipment.md
+      - 树木: item/trees.md
     - 贡献者: contributor.md
     - 关于: about.md
 theme:
