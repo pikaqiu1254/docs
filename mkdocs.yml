@@ -11,6 +11,7 @@ nav:
       - CMI: plugin/cmi.md
       - 地皮: plugin/plotsquared.md
       - 菜单: plugin/menu.md
+      - 统计: plugin/plan.md
     - 物品:
       - 消耗品: item/Consumables.md 
       - 装备: item/equipment.md
