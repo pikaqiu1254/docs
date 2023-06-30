@@ -94,8 +94,7 @@
 ![多人游戏](../img/howtojoin/multiplayers_game.png)
 2.  点击右下角添加服务器
 ![添加服务器](../img/howtojoin/add_server.png)  
-3.  填写如下内容，点击完成  
- `new.chenjia.one`
+3. **在服务器地址一栏，复制粘贴[QQ群](https://jq.qq.com/?_wv=1027&k=vXkTtV8K)公告中发布的服务器地址**
 4. 刷新一下页面，双击进入服务器~  
 
 
