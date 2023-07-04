@@ -5,15 +5,14 @@
 <font color='red'>**如果你有正版，可以直接通过正版进入** </font>
 
 1. 注册皮肤站账号，皮肤站地址:[海蓝之家皮肤站](https://skin.chenjia.one:25556/)  
-![注册](../img/howtojoin/register.png)  
 
 2. 在注册界面注册账号  
-![注册界面](../img/howtojoin/registerui.png)  
+![注册界面](../img/howtojoin/register.png)  
 
-3. 进入皮肤站你会看到一个邮箱验证  
+1. 进入皮肤站你会看到一个邮箱验证  
 ![仪表盘邮箱验证](../img/howtojoin/dashboard_emailauth.png)
 如果你没有看到邮件，可以点击再次发送  
-![邮箱验证](../img/howtojoin/emailauth.jpg)  
+![邮箱验证](../img/howtojoin/emailauth.png)  
 打开链接后把你注册时的邮箱填入进去即可  
 
 ## 2. 启动器配置  
