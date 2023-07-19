@@ -28,6 +28,8 @@
 其中，手机版的教学可以参考 HMCL 启动器的教学，游玩技巧可以看：
 [哔哩哔哩](https://www.bilibili.com/video/BV19v4y167q9)  
 
+<red>**建议使用[海蓝大陆专属整合包](https://modrinth.com/modpack/hailancontinent)游玩，体验感更佳！**</red>
+
 ### 2.0 附：皮肤站快速配置<sub>(e.g. 海蓝之家)</sub>
 
   <div class="card-footer"><button id="ygg-dnd-button" class="btn" draggable="true" data-clipboard-text="https://skin.chenjia.one:25556/api/yggdrasil" > 将此按钮拖动至启动器</button>
