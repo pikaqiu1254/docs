@@ -60,5 +60,7 @@ extra:
       link: https://space.bilibili.com/12325142
     - icon: fontawesome/brands/qq
       link: https://jq.qq.com/?_wv=1027&k=vXkTtV8K
-
+  analytics:
+    provider: custom
+ 
 copyright: Copyright &copy; 页面内容均以<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow noreferrer">CC BY-NC-SA 4.0</a>条款授权
