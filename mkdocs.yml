@@ -1,14 +1,5 @@
-/*
- * @Author: LinRan me@ranawa.com
- * @Date: 2024-05-03 10:24:28
- * @LastEditors: LinRan me@ranawa.com
- * @LastEditTime: 2024-06-20 22:33:15
- * @FilePath: \docs\mkdocs.yml
- * 
- * Copyright (c) 2024 by $LinRan, All Rights Reserved. 
- */
 site_name: 海蓝大陆文档
-site_description: 'B站up主尘甲出资并设计的RPG类Minecraft服务器“海蓝大陆”使用文档'
+site_description: 'B站up主尘甲出资并设计的休闲类Minecraft服务器“海钓狂欢”使用文档'
 site_url: https://docs.chenjia.one/
 repo_url: https://github.com/Chenjia-project/docs
 nav:
