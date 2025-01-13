@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@vuepress-plume/plugin-search':
+        specifier: 1.0.0-rc.128
+        version: 1.0.0-rc.128(typescript@5.7.3)(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@22.10.5)(less@4.2.1)(sass-embedded@1.83.1)(sass@1.83.1)(stylus@0.64.0)(typescript@5.7.3))(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3)))
     devDependencies:
       '@vuepress/bundler-vite':
         specifier: 2.0.0-rc.19

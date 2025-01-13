@@ -1,6 +1,7 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
+import notes from './notes/index.ts'
 
 export default defineUserConfig({
   base: '/',
@@ -25,7 +26,7 @@ export default defineUserConfig({
     // lastUpdated: true,
     // contributors: true,
     // changelog: false,
-
+    notes,
     /**
      * 博客
      * @see https://theme-plume.vuejs.press/config/basic/#blog
@@ -41,7 +42,7 @@ export default defineUserConfig({
     // },
 
     /* 博客文章页面链接前缀 */
-    article: '/article/',
+    // article: '/article/',
 
     /**
      * 编译缓存，加快编译速度
@@ -64,13 +65,12 @@ export default defineUserConfig({
        * Shiki 代码高亮
        * @see https://theme-plume.vuejs.press/config/plugins/code-highlight/
        */
-      // shiki: {
-      //   // 强烈建议预设代码块高亮语言，插件默认加载所有语言会产生不必要的时间开销
-      //   languages: ['shell', 'bash', 'typescript', 'javascript'],
-      //   twoslash: true, // 启用 twoslash
-      //   whitespace: true, // 启用 空格/Tab 高亮
-      //   lineNumbers: true, // 启用行号
-      // },
+      shiki: {
+        languages: ['javascript', 'typescript', 'html', 'css'],
+        twoslash: true,
+        whitespace: true,
+        lineNumbers: true,
+      },
 
       /* 本地搜索, 默认启用 */
       // search: true,

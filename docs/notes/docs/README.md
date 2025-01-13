@@ -6,3 +6,4 @@ permalink: /docs/
 
 - [bar](./bar.md)
 - [foo](./foo.md)
+
