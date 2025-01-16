@@ -14,7 +14,7 @@ config:
         -
           theme: brand
           text: 查看文档 →
-          link: /docs/
+          link: /docs/guidebook/
         -
           theme: alt
           text: Github →
