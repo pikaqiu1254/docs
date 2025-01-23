@@ -55,11 +55,15 @@
               fi
             '';
             pnpmDeps = pkgs.pnpm.fetchDeps {
+              buildInputs = with pkgs; [
+                nodejs
+                nodePackages.pnpm
+              ];
               pname = "chenjia-docs";
               version = "0-unstable";
               src = ./.;
               env.NODE_EXTRA_CA_CERTS = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
-              hash = "sha256-nvECsOjVP+XV2q7SEOw/GtZI1XGG5gABFQnRmCFl65o=";
+              hash = "sha256-1WKV1P+fG1XATazFMGcIQO2+Izl0fU1Sq34audFCRG8=";
             };
             packages = with pkgs; [
               nodejs
