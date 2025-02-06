@@ -1,20 +1,20 @@
-import { viteBundler } from '@vuepress/bundler-vite'
-import { defineUserConfig } from 'vuepress'
-import { plumeTheme } from 'vuepress-theme-plume'
-import notes from './notes/index.ts'
+import { viteBundler } from "@vuepress/bundler-vite";
+import { defineUserConfig } from "vuepress";
+import { plumeTheme } from "vuepress-theme-plume";
+import notes from "./notes/index.ts";
 
 export default defineUserConfig({
-  base: '/',
-  lang: 'zh-CN',
-  title: '尘甲系列服务器文档站',
-  description: '尘甲系列服务器文档站',
+  base: "/",
+  lang: "zh-CN",
+  title: "尘甲系列服务器文档站",
+  description: "尘甲系列服务器文档站",
 
   bundler: viteBundler(),
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
 
   theme: plumeTheme({
     /* 添加您的部署域名, 有助于 SEO, 生成 sitemap */
-    hostname: 'https://your_site_url',
+    hostname: "https://docs.chenjia.one",
 
     /* 文档仓库配置，用于 editLink */
     // docsRepo: 'https://github.com/Chenjia-project/docs',
@@ -48,7 +48,7 @@ export default defineUserConfig({
      * 编译缓存，加快编译速度
      * @see https://theme-plume.vuejs.press/config/basic/#cache
      */
-    cache: 'filesystem',
+    cache: "filesystem",
 
     /**
      * 为 markdown 文件自动添加 frontmatter 配置
@@ -66,7 +66,7 @@ export default defineUserConfig({
        * @see https://theme-plume.vuejs.press/config/plugins/code-highlight/
        */
       shiki: {
-        languages: ['javascript', 'typescript', 'html', 'css'],
+        languages: ["javascript", "typescript", "html", "css"],
         twoslash: true,
         whitespace: true,
         lineNumbers: true,
@@ -151,17 +151,19 @@ export default defineUserConfig({
        * 评论 comments
        * @see https://theme-plume.vuejs.press/guide/features/comments/
        */
-      // comment: {
-      //   provider: '', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
-      //   comment: true,
-      //   repo: '',
-      //   repoId: '',
-      //   category: '',
-      //   categoryId: '',
-      //   mapping: 'pathname',
-      //   reactionsEnabled: true,
-      //   inputPosition: 'top',
-      // },
+      comment: {
+        provider: "Artalk", // "Artalk" | "Giscus" | "Twikoo" | "Waline"
+        server: "https://comments.qaq.li",
+        site: "尘甲系列服务器文档站",
+        comment: true,
+        // repo: '',
+        // repoId: '',
+        // category: '',
+        // categoryId: '',
+        // mapping: 'pathname',
+        // reactionsEnabled: true,
+        // inputPosition: 'top',
+      },
     },
 
     /**
@@ -170,4 +172,4 @@ export default defineUserConfig({
      */
     encrypt: {},
   }),
-})
+});
