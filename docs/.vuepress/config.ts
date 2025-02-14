@@ -6,8 +6,8 @@ import notes from "./notes/index.ts";
 export default defineUserConfig({
   base: "/",
   lang: "zh-CN",
-  title: "尘甲系列服务器文档站",
-  description: "尘甲系列服务器文档站",
+  title: "爱玩游戏的尘甲",
+  description: "爱玩游戏的尘甲",
 
   bundler: viteBundler(),
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
