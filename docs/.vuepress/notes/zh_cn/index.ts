@@ -7,10 +7,10 @@ export default defineNoteConfig({
   link: '/docs/',
   sidebar: [
     {
-      text: '主页',
-      prefix: 'home',
+      text: '个人主页',
+      prefix: '01个人主页',
       items: [
-        '个人主页-尘甲'
+        '爱玩游戏的尘甲'
       ]
     },
     // {
@@ -24,26 +24,37 @@ export default defineNoteConfig({
     {
       text: '资源分享',
       collapsed: false,
-      prefix: '资源分享',
+      prefix: '02资源分享',
       items: [
         '整合包',
         '其他资源'
       ]
     },
     {
-      text: '服务器',
+      text: '公益服务器',
       collapsed: false,
-      // prefix: '服务器',
+      prefix: '03公益服务器',
       items: [
         {
-          text: '四周目',
+          text: '联合服-开放中',
           collapsed: false,
-          prefix: '四周目专用指南',
+          prefix: '联合服',
           items: [
-            '四周目新手指南',
-            '服务器生存公约',
-            '装备最优附魔表',
-            '机器命令指南',
+            '00联合服简介',
+          ]
+        },
+        {
+          text: '四周目-无限世界-开放中',
+          collapsed: false,
+          prefix: '四周目',
+          items: [
+            '00四周目简介',
+            '01四周目新手指南',
+            '02服务器生存公约',
+            '03装备最优附魔表',
+            '04机器命令指南',
+            '05已完成的建筑',
+            '06计划未来建筑',
           ]
         }  
       ]
@@ -51,7 +62,7 @@ export default defineNoteConfig({
     {
       text: '关于',
       items: [
-        '关于'
+        '04关于'
       ]
     }
   ]
