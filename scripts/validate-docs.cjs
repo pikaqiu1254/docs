@@ -9,7 +9,7 @@ const CONFIG = {
   docRoot: path.resolve(__dirname, '../docs/notes/docs'),             // 文档根目录
   publicRoot: path.resolve(__dirname, '../docs/.vuepress/public'), // 公共资源根目录
   allowedExtensions: ['.md', '.png', '.jpg', '.jpeg'],    // 允许的文件类型
-  requiredFrontmatter: ['title', 'permalink'],     // 必填字段
+  requiredFrontmatter: ['title', 'permalink', 'createTime'],     // 必填字段
   imageBasePath: '/'                                       // VuePress公共资源基准路径
 };
 
@@ -69,7 +69,7 @@ class DocValidator {
             if (!frontmatter[field]) {
               this.errors.push(
                 `${relPath}: 缺失必要字段 "${field}"\n` +
-                `示例格式：\n---\ntitle: 页面标题\neditLink: true\ntags: [指南]\n---`
+                `示例格式：\n---\ntitle: 页面标题\npermalink: /docs/home\ncreateTime: 2025/04/30 18:00.00\n---`
               );
               hasError = true;
             }

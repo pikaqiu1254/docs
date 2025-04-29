@@ -2,9 +2,11 @@ name: Docs Validation
 
 on:
   pull_request:
-    branches: [ dev ]  # 监控的分支名称
+    branches: [ dev, main ]  # 监控的分支名称
     paths:
       - 'docs/**'        # 仅当 docs 目录变更时触发
+      - 'scripts/**'  # 仅当 scripts 目录变更时触发
+      - '.github/workflows/docs-validation.yml'  # 仅当工作流文件变更时触发
 
 jobs:
   validate-docs:
