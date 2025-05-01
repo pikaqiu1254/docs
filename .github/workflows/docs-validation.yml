@@ -22,10 +22,10 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        node-version: '22'
 
     - name: Install dependencies
-      run: npm install js-yaml chalk
+      run: npm install js-yaml@4 chalk@4
 
     - name: Run validation
       id: validation
