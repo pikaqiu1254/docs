@@ -1,0 +1,51 @@
+name: Docs Validation
+
+on:
+  pull_request:
+    branches: [ dev, main ]  # 监控的分支名称
+    paths:
+      - 'docs/**'        # 仅当 docs 目录变更时触发
+      - 'scripts/**'  # 仅当 scripts 目录变更时触发
+      - '.github/workflows/docs-validation.yml'  # 仅当工作流文件变更时触发
+
+jobs:
+  validate-docs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+
+    - name: Install dependencies
+      run: npm install js-yaml@4 chalk@4
+
+    - name: Run validation
+      id: validation
+      run: |
+        node scripts/validate-docs.cjs 2>&1 | tee validation.log
+        echo "VALIDATION_RESULT<<EOF" >> $GITHUB_ENV
+        cat validation.log >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
+
+    - name: Create PR comment
+      if: ${{ always() }}
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const output = process.env.VALIDATION_RESULT;
+          const comment = `### 文档规范检查结果 🔍\n\n\`\`\`\n${output}\n\`\`\``;
+          
+          await github.rest.issues.createComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.payload.pull_request.number,
+            body: comment
+          });
