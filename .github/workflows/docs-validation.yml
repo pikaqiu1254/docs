@@ -2,11 +2,11 @@ name: Docs Validation
 
 on:
   pull_request:
-    branches: [ dev, main ]  # 监控的分支名称
+    branches: [dev, main]
     paths:
-      - 'docs/**'        # 仅当 docs 目录变更时触发
-      - 'scripts/**'  # 仅当 scripts 目录变更时触发
-      - '.github/workflows/docs-validation.yml'  # 仅当工作流文件变更时触发
+      - 'docs/**'
+      - 'scripts/**'
+      - '.github/workflows/docs-validation.yml'
 
 jobs:
   validate-docs:
@@ -16,6 +16,9 @@ jobs:
       pull-requests: write
 
     steps:
+    # ----------------------------------
+    # 基础环境配置
+    # ----------------------------------
     - name: Checkout code
       uses: actions/checkout@v4
 
@@ -23,29 +26,130 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '22'
+        cache: 'npm'
 
     - name: Install dependencies
       run: npm install js-yaml@4 chalk@4
 
+    # ----------------------------------
+    # 文档验证执行
+    # ----------------------------------
     - name: Run validation
       id: validation
       run: |
+        set +e
         node scripts/validate-docs.cjs 2>&1 | tee validation.log
+        exit_code=$?
         echo "VALIDATION_RESULT<<EOF" >> $GITHUB_ENV
-        cat validation.log >> $GITHUB_ENV
+        head -n 1000 validation.log >> $GITHUB_ENV
         echo "EOF" >> $GITHUB_ENV
+        exit $exit_code
 
-    - name: Create PR comment
-      if: ${{ always() }}
+    - name: Upload validation log
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: validation-${{ github.run_id }}.log
+        path: validation.log
+
+    # ----------------------------------
+    # 评论历史清理
+    # ----------------------------------
+    - name: Clean old comments
+      if: always()
       uses: actions/github-script@v7
+      env:
+        GH_TOKEN: ${{ secrets.PAT_TOKEN }}
       with:
         script: |
-          const output = process.env.VALIDATION_RESULT;
-          const comment = `### 文档规范检查结果 🔍\n\n\`\`\`\n${output}\n\`\`\``;
+          const MAGIC_TAG = '<!-- DOCS_VALIDATOR -->';
+          const MAX_RETRY = 3;
           
-          await github.rest.issues.createComment({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            issue_number: context.payload.pull_request.number,
-            body: comment
-          });
+          async function retryOperation(fn, attempt = 1) {
+            try {
+              return await fn();
+            } catch (error) {
+              if (attempt >= MAX_RETRY) throw error;
+              await new Promise(r => setTimeout(r, 1000 * attempt));
+              return retryOperation(fn, attempt + 1);
+            }
+          }
+
+          try {
+            // 获取所有评论
+            const { data: comments } = await retryOperation(() => 
+              github.rest.issues.listComments({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                per_page: 100
+              })
+            );
+
+            // 过滤历史评论
+            const oldComments = comments.filter(c => 
+              c.user.login === 'github-actions[bot]' &&
+              c.body.includes(MAGIC_TAG)
+            );
+
+            // 并行删除操作
+            await Promise.all(oldComments.map(comment => 
+              retryOperation(() => 
+                github.rest.issues.deleteComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  comment_id: comment.id
+                })
+              )
+            ));
+
+            console.log(`已清理 ${oldComments.length} 条历史评论`);
+          } catch (error) {
+            core.warning(`评论清理失败: ${error.message}`);
+          }
+
+    # ----------------------------------
+    # 创建新评论
+    # ----------------------------------
+    - name: Create PR comment
+      if: always()
+      uses: actions/github-script@v7
+      env:
+        GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+      with:
+        script: |
+          const MAGIC_TAG = '<!-- DOCS_VALIDATOR -->';
+          const MAX_OUTPUT = 4000;  // GitHub评论长度限制
+          
+          try {
+            // 获取处理后的输出内容
+            let output = process.env.VALIDATION_RESULT || '未获取到验证输出';
+            output = output.slice(0, MAX_OUTPUT);
+            
+            // 构建日志链接
+            const runURL = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const logLink = `📎 [查看完整日志](${runURL})`;
+            
+            // 构造评论内容
+            const commentBody = `
+              ${MAGIC_TAG}
+              ### 📄 文档规范检查结果 (运行时间: ${new Date().toISOString()})
+              
+              \`\`\`\n${output}\n\`\`\`
+              
+              ${logLink}
+            
+            `;
+
+            // 创建评论
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: commentBody
+            });
+            
+          } catch (error) {
+            core.error(`评论创建失败: ${error}`);
+            throw new Error('无法创建PR评论，请检查权限配置');
+          }
