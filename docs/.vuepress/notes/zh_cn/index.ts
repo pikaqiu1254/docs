@@ -22,6 +22,12 @@ export default defineNoteConfig({
     //   ]
     // },
     {
+      text: '索引',
+      items: [
+        '00索引'
+      ]
+    },
+    {
       text: '资源分享',
       collapsed: false,
       prefix: '02资源分享',
