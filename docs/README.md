@@ -14,7 +14,7 @@ config:
         -
           theme: brand
           text: 查看文档 →
-          link: /docs/fourthserver_introduction/
+          link: /docs/rdl4fczv/
         -
           theme: alt
           text: Github →
