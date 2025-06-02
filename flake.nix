@@ -63,7 +63,7 @@
               version = "0-unstable";
               src = ./.;
               env.NODE_EXTRA_CA_CERTS = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
-              hash = "sha256-xl8YSkFlbvkIe3Tvpm0XuZWgE1Y1QC7mrQcbM6jR+cw=";
+              hash = "sha256-FmPSLcWZ+gIj8EujrP2Oq/T7nuX8ec9GEOlfJQ7p2EE=";
             };
             packages = with pkgs; [
               nodejs
