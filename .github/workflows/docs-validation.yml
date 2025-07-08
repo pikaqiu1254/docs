@@ -58,7 +58,7 @@ jobs:
       if: always()
       uses: actions/github-script@v7
       with:
-        github-token: ${{ env.ACT && secrets.GITHUB_TOKEN || secrets.PAT_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
           const MAGIC_TAG = '<!-- DOCS_VALIDATOR -->';
           const MAX_RETRY = 3;
@@ -113,7 +113,7 @@ jobs:
       if: always()
       uses: actions/github-script@v7
       with:
-        github-token: ${{ env.ACT && secrets.GITHUB_TOKEN || secrets.PAT_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
           const MAGIC_TAG = '<!-- DOCS_VALIDATOR -->';
           const MAX_OUTPUT = 4000;  // GitHub评论长度限制
