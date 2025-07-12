@@ -41,6 +41,7 @@ export default defineNoteConfig({
       collapsed: false,
       prefix: '03公益服务器',
       items: [
+        '尘甲-服务器0基础入坑指南',
         '尘甲-服务器生存公约（通版）',
         {
           text: '联合服-开放中',
