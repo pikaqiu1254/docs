@@ -8,12 +8,14 @@ on:
       - 'scripts/**'
       - '.github/workflows/docs-validation.yml'
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   validate-docs:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
+    
 
     steps:
     # ----------------------------------
