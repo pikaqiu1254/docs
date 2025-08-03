@@ -242,7 +242,7 @@ jobs:
           exit 1
           
       - name: 检查路径图片检查状态
-        if: needs.sidebar.result != 'success'
+        if: needs.validate-docs.result != 'success'
         run: |
           echo "路径图片检查任务失败"
           exit 1
