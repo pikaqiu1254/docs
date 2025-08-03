@@ -14,9 +14,9 @@ config:
         -
           theme: brand
           text: 查看文档 →
-          link: /docs/rdl4fczv/
+          link: /docs/index/
         -
           theme: alt
           text: Github →
-          link: https://github.com/pengzhanbo/vuepress-theme-plume
+          link: https://github.com/Chenjia-project/docs
 ---
