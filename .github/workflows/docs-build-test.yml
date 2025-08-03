@@ -8,7 +8,7 @@ on:
       - 'scripts/**'
       - '.github/workflows/docs-build-test.yml'
   push:
-    branches: [dev, main]
+    branches: [main]
     paths:
       - 'docs/**'
       - 'scripts/**'
