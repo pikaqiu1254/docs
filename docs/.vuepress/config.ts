@@ -17,9 +17,9 @@ export default defineUserConfig({
     hostname: "https://docs.chenjia.one",
 
     /* 文档仓库配置，用于 editLink */
-    // docsRepo: 'https://github.com/Chenjia-project/docs',
-    // docsDir: 'docs',
-    // docsBranch: '',
+    docsRepo: 'https://github.com/Chenjia-project/docs/',
+    docsDir: 'docs',
+    docsBranch: 'main',
 
     /* 页内信息 */
     // editLink: true,
