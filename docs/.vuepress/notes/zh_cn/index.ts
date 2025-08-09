@@ -88,15 +88,7 @@ export default defineNoteConfig({
                 '总结',
               ]
             },
-            { 
-              text:'附属服务器——创造服',
-              collapsed:false,
-              prefix:'附属服务器——创造服',
-              items:[
-                '创造服简介',
-                '创造服公约',
-              ]
-            }
+            '附属服务器——创造服'
           ]
         }  
       ]
