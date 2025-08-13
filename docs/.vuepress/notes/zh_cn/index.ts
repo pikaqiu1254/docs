@@ -69,6 +69,7 @@ export default defineNoteConfig({
               collapsed:false,
               prefix:'服务器封禁案例',
               items: [
+                '索引',
                 '案例一',
                 '案例二',
                 '案例三',
@@ -84,8 +85,10 @@ export default defineNoteConfig({
                     '案例六-3',
                   ]
                 },
+                '总结',
               ]
-            }
+            },
+            '附属服务器——创造服'
           ]
         }  
       ]
