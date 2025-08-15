@@ -7,13 +7,6 @@ on:
       - 'docs/**'
       - 'scripts/**'
       - '.github/workflows/docs-build-test.yml'
-  push:
-    branches: [main]
-    paths:
-      - 'docs/**'
-      - 'scripts/**'
-      - '.github/workflows/docs-build-test.yml'
-
 permissions:
   contents: read
 
