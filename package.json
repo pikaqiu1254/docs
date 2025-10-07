@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@vuepress-plume/plugin-search": "1.0.0-rc.128",
-    "artalk": "^2.9.1"
+    "artalk": "^2.9.1",
+    "swiper": "^11.2.10"
   }
 }
