@@ -92,7 +92,16 @@ const docs = defineCollection({
       collapsed: false,
       prefix: '03公益服务器',
       items: [
-        '尘甲-服务器0基础入坑指南',
+        {
+          text: '尘甲-服务器0基础入坑指南',
+          collapsed: false,
+          prefix: '尘甲-服务器0基础入坑指南',
+          items: [
+            '索引',
+            'windows版本',
+            '常见问题'
+          ]
+        },
         '尘甲-服务器生存公约（通版）',
         {
           text: '联合服-开放中',
