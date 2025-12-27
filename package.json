@@ -19,10 +19,12 @@
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.24",
     "http-server": "^14.1.1",
+    "markdownlint-cli": "^0.45.0",
+    "sass-embedded": "^1.93.3",
     "typescript": "^5.9.3",
-    "vue": "^3.5.22",
-    "vuepress": "2.0.0-rc.24",
-    "vuepress-theme-plume": "1.0.0-rc.169"
+    "vue": "^3.5.24",
+    "vuepress": "2.0.0-rc.19",
+    "vuepress-theme-plume": "1.0.0-rc.128"
   },
   "dependencies": {
     "swiper": "^12.0.2"

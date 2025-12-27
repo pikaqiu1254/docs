@@ -59,11 +59,12 @@
                 nodejs
                 nodePackages.pnpm
               ];
+              fetcherVersion = 2;
               pname = "chenjia-docs";
               version = "0-unstable";
               src = ./.;
               env.NODE_EXTRA_CA_CERTS = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
-              hash = "sha256-FmPSLcWZ+gIj8EujrP2Oq/T7nuX8ec9GEOlfJQ7p2EE=";
+              hash = "sha256-zxrQ2RFZt6TMQn6nS7AiJ6S+q6BlpJ+m5ZxC33Y7V+E=";
             };
             packages = with pkgs; [
               nodejs
